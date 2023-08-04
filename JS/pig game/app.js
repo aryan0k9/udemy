@@ -5,6 +5,8 @@ const currentScoreLeft = document.querySelector('#main .left_div .scoreDiv p');
 const currentScoreRight = document.querySelector('#main .right_div .scoreDiv p');
 const setCurrentScoreInLeftDiv = document.querySelector('.left_div h2');
 const setCurrentScoreInRightDiv =document.querySelector('.right_div h2');
+const notNumber = document.querySelector('.button p');
+const buttons = document.querySelector('.button');
 const newGame = document.querySelector('.newGame');
 const btnHold = document.querySelector('.hold');
 const left_div = document.querySelector('.left_div');
@@ -19,10 +21,18 @@ let currentScoreLeftValue = 0,
 
     
 // For win we need number
-let scoreToRich = prompt("Enter the number you want to rich?");
+let scoreToRich = prompt("Enter a number for play game");
 finalScore.innerHTML = scoreToRich;
 
-// Random Funcnality and player change
+// checking that prompt is not empty
+if(scoreToRich == null || scoreToRich == '' || scoreToRich <=0){
+    btnHold.disabled = true;
+    roleDice.disabled = true;
+    notNumber.innerHTML = 'Please Enter Some Positive Value';
+    buttons.style.left = '37%';
+}
+else{
+    // Random Funcnality and player change
     roleDice.addEventListener('click',()=>{
         // Random Number Generate
         let randomNumber = Math.trunc(Math.random() * 6) + 1;
@@ -114,6 +124,7 @@ function disabl(values){
         setCurrentScoreInRightDiv.style.fontSize = '30px';
         setCurrentScoreInRightDiv.innerHTML = "🎉 You Win 🎉"
     }
+}
 }
 
 // Starting New Game
