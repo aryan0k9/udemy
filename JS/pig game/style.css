@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(184,47,60);
+    background: linear-gradient(132deg, rgba(184,47,60,1) 16%, rgba(119,54,129,1) 69%);
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0px auto;
+    position: relative;
+}
+#main .left_div{
+    width: 50%;
+    height: 95vh;
+    background-color: #D9AEBD;
+    border-radius: 15px 0px 0px 15px;
+}
+#main .right_div{
+    width: 50%;
+    height: 95vh;
+    background-color: #BB7A96;
+    border-radius: 0px 15px 15px 0px;
+}
+#main .left_div h1,#main .right_div h1{
+    margin-top: 90px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+}
+#main .left_div h2,#main .right_div h2{
+    color: #C7365F;
+    font-size: 90px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+}
+#main .scoreDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    background-color: #C7365F;
+    color: #fff;
+}
+#main .scoreDiv h4{
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#main .scoreDiv p{
+    font-size: 25px;
+}
+.button{
+    position: absolute;
+    top: 5%;
+    left: 34%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.button button{
+    padding: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.button p{
+    margin-bottom: 10px;
+    color: #773681;
+}
+.button .newGame{
+    width: 190px;
+    font-size: 20px;
+}
+.button img{
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+}
+.button .dice{
+    width: 210px;
+    font-size: 20px;
+    margin-top: 120px;
+}
+.button .hold{
+    width: 150px;
+    font-size: 20px;
+    margin-top: 20px;
+}
